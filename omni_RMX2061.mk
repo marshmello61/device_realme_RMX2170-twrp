@@ -15,8 +15,8 @@
 #
 
 # Release name
-PRODUCT_RELEASE_NAME := umi
-DEVICE_PATH := device/xiaomi/umi
+PRODUCT_RELEASE_NAME := RMX2061
+DEVICE_PATH := device/realme/RMX2061
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
 
@@ -26,11 +26,11 @@ $(call inherit-product, vendor/omni/config/common.mk)
 PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,$(LOCAL_PATH)/recovery/root,recovery/root)
 
 ## Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := umi
-PRODUCT_NAME := omni_umi
-PRODUCT_BRAND := Xiaomi
-PRODUCT_MODEL := Mi 10
-PRODUCT_MANUFACTURER := Xiaomi
+PRODUCT_DEVICE := RMX2061
+PRODUCT_NAME := omni_RMX2061
+PRODUCT_BRAND := realme
+PRODUCT_MODEL := realme 6 Pro
+PRODUCT_MANUFACTURER := realme
 
 # HACK: Set vendor patch level
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -39,4 +39,3 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_SYSTEM_PROPERTY_BLACKLIST += \
     ro.bootimage.build.date.utc \
     ro.build.date.utc
-

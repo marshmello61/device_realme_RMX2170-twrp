@@ -4,8 +4,12 @@
 
 # mount point  fstype  device                             device2                flags
 
-/system_root   ext4    /dev/block/mapper/system                                  flags=display="System";backup=0;logical
-/vendor        ext4    /dev/block/mapper/vendor                                  flags=display="Vendor";backup=0;logical
+system		/system			ext4		
+vendor		/vendor			ext4		
+oppo_product		/oppo_product		ext4		
+engineering		/engineering		ext4		
+preload_common		/preload_common		ext4		
+
 /super_image   emmc    /dev/block/bootdevice/by-name/super                       flags=backup=1;display="Super"
 /data          f2fs    /dev/block/bootdevice/by-name/userdata                    flags=fileencryption=ice:aes-256-cts;wrappedkey
 /boot          emmc    /dev/block/bootdevice/by-name/boot

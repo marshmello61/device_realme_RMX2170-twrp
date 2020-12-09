@@ -38,6 +38,7 @@ vendor                                                  /vendor                 
 oppo_product                                            /oppo_product            ext4    ro,barrier=1,discard                                 wait,logical,first_stage_mount,nofail
 engineering                                             /oppo_engineering        ext4    ro,barrier=1,discard                                 wait,logical,first_stage_mount,nofail
 preload_common                                          /preload_common          ext4    ro,barrier=1,discard                                 wait,logical,first_stage_mount,nofail
+/dev/block/by-name/metadata                             /metadata                ext4    noatime,nosuid,nodev,discard                         wait,formattable,wrappedkey,first_stage_mount
 # Add fs_mgr flag - sysfs_path=/sys/devices/platform/soc/xxxx.[ufshc|sdhci] to userdata entry, based on UFS|eMMC device.
 /dev/block/bootdevice/by-name/cache                     /cache                   ext4    nosuid,noatime,nodev,barrier=1                       wait
 /dev/block/bootdevice/by-name/custom                    /oppo_custom             ext4    ro,barrier=1,discard                                 wait,nofail
@@ -56,5 +57,7 @@ preload_common                                          /preload_common         
 /dev/block/bootdevice/by-name/misc                      /misc                    emmc    defaults                                             defaults
 /dev/block/zram0                                        none                     swap    defaults                                             zramsize=1073741824
 
+#ifdef VENDOR_EDIT
 #Runsheng.Pei@PSW.AD.Storage.ReservePartition.1207580, 2017/12/29, Add for new reserve partition
 /dev/block/bootdevice/by-name/opporeserve2      /mnt/vendor/opporeserve             ext4   nosuid,nodev,noatime,barrier=1                           wait,check
+#endif

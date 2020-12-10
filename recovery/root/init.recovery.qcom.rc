@@ -33,7 +33,6 @@ on fs
     chmod 0664 /dev/ion
     chown system system /dev/ion
     install_keyring
-    write /sys/class/power_supply/usb/otg_switch 1
 
 on early-fs
     start vold
@@ -97,8 +96,6 @@ service init-recovery-post-boot /sbin/init.recovery.post-boot.sh
 
 on boot
     setprop sys.usb.config adb
-    chmod 0755 /sbin/init.recovery.post-boot.sh
-    start init-recovery-post-boot
 
 on property:crypto.ready=0
     stop sbinqseecomd

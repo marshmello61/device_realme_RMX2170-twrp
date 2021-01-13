@@ -7,3 +7,5 @@ persist.sys.isUsbOtgEnabled=true
 vendor.gatekeeper.disable_spu=true
 ro.adb.secure=0
 fbe.metadata.wrappedkey=true
+ro.product.name=RMX2170
+ro.product.product.device=RMX2170

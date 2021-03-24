@@ -152,7 +152,3 @@ TW_RECOVERY_ADDITIONAL_RELINK_LIBRARY_FILES += \
     $(TARGET_OUT_SHARED_LIBRARIES)/ashmemd_aidl_interface-cpp.so \
     $(TARGET_OUT_SHARED_LIBRARIES)/libashmemd_client.so \
     $(TARGET_OUT_SHARED_LIBRARIES)/libxml2.so
-
-# PBRP specific build flags
-PB_DISABLE_DEFAULT_DM_VERITY := true
-PB_DISABLE_DEFAULT_TREBLE_COMP := true

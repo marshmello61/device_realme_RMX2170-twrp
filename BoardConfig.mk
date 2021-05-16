@@ -16,6 +16,23 @@
 
 DEVICE_PATH := device/realme/RMX2170
 
+# SHRP
+SHRP_DEVICE_CODE := RMX2170
+SHRP_PATH := device/realme/$(SHRP_DEVICE_CODE)
+SHRP_MAINTAINER := "Mayur @marshmello_61"
+SHRP_REC_TYPE := SAR
+SHRP_DEVICE_TYPE := A/B
+SHRP_AB := true
+SHRP_REC := /dev/block/bootdevice/by-name/recovery
+SHRP_EDL_MODE := 1
+SHRP_INTERNAL := /sdcard
+SHRP_EXTERNAL := /external_sd
+SHRP_OTG := /usb_otg
+SHRP_STATUSBAR_RIGHT_PADDING := 20
+SHRP_STATUSBAR_LEFT_PADDING := 80
+SHRP_DARK := true
+SHRP_FLASH_MAX_BRIGHTNESS := 200
+
 # Architecture
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-2a

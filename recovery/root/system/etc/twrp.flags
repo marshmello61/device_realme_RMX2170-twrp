@@ -1,4 +1,8 @@
 # mount point	fstype	device											device2				flags
+# Logical partitions
+/product																					flags=display="Product"
+/vendor																						flags=display="Vendor"
+
 # Other partitions
 /metadata	ext4	/dev/block/bootdevice/by-name/metadata											flags=display="Metadata";wrappedkey
 /firmware	vfat	/dev/block/bootdevice/by-name/modem											flags=display="Firmware";mounttodecrypt;fsflags="ro,shortname=lower,uid=1000,gid=1000,dmask=227,fmask=337,context=u:object_r:firmware_file:s0"
